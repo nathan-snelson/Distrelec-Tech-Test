@@ -1,14 +1,19 @@
-carousel {
-  background-color: #fcba03;
+.rightArrow {
+  position: absolute;
+  top: 10%;
+  right: 20px;
+  font-size: 2rem;
+  stroke: #333;
+  height: 10%;
 }
-carousel heading {
-  margin: 0;
-  padding: 0;
-  font-size: large;
-}
-carousel item {
-  display: inline-block;
-  font-size: medium;
+
+.leftArrow {
+  position: absolute;
+  top: 10%;
+  left: 20px;
+  font-size: 2rem;
+  stroke: #333;
+  height: 10%;
 }
 
 /*# sourceMappingURL=Carousel.css.map */

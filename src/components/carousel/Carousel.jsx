@@ -1,12 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+
+import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/react/solid'
+import Card from '../card/Card';
+
 import './Carousel.css'
 
-const LeftNav = () => {
-    
+const RightNav = (props) => {
+    const {handleClick} = props;
+
+    return (
+        <div onClick={handleClick}>
+            <ChevronRightIcon className="rightArrow"/>
+        </div>
+    )
 }
 
-const RightNav = () => {
+const LeftNav = (props) => {
+    const {handleClick} = props;
 
+    return (
+        <div onClick={handleClick}>
+            <ChevronLeftIcon className="leftArrow"/>
+        </div>
+    )
 }
 
 const Carousel = ({data}) => {
@@ -20,19 +36,22 @@ const Carousel = ({data}) => {
         setCurrent(current === 0 ? data.length - 1 : current - 1);
     }
 
-    return (        
-        <div>    
+    return (
+        <div>
+            <h2>Related Products</h2>
+            <LeftNav handleClick={prevSlide} />
             <div>
             {
                 data.map((item, index) => {
                     return (
                         <div key={index}>
-                            {index === current && <img src={item.productImageUrl} alt={item.productImageAltText}/>}
+                            {index === current && <Card product={item} />}
                         </div>
                     )
                 })
             }
             </div>
+            <RightNav handleClick={nextSlide}/>
         </div>
     )
 }

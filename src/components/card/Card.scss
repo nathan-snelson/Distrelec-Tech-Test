@@ -1,0 +1,31 @@
+.card {
+    padding: 5px;
+}
+
+.heading {
+    font-weight: bold;
+    font-size: large;
+}
+
+.divider { 
+    width: 10%;
+}
+
+.image {
+    cursor: pointer;
+}
+
+.button {
+    padding: 4px;
+    width: 10%;
+    background-color: #68c143;
+    cursor: pointer;
+    color: #FFFF;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background-color: #3f7727;    
+}
